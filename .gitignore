@@ -6,6 +6,9 @@
 # dotenv files
 .env
 
+##Dont want to store our data text file just yet 
+passenger-data.txt 
+
 # User-specific files
 *.rsuser
 *.suo
