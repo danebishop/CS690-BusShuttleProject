@@ -45,7 +45,7 @@ public class DataManager{
         if (File.Exists("passenger-data.txt")){
             var passengerFileContent = File.ReadAllLines("passenger-data.txt");
             foreach (var line in passengerFileContent){
-                var splitted = line.Split(":",String.SplitOptions.RemoveEmptyEntries);
+                var splitted = line.Split(":", StringSplitOptions.RemoveEmptyEntries);
                 var driverName = splitted[0];
                 var driver = new Driver (driverName);
                 
@@ -53,7 +53,7 @@ public class DataManager{
                 var loop = new Loop(loopName);
 
                 var stopName = splitted[2];
-                var stop = new Stop(stopName):
+                var stop = new Stop(stopName);
 
                 var boarded = int.Parse(splitted[3]);
 
