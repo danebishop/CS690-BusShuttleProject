@@ -8,7 +8,9 @@ public class FileSaver{
 
     public FileSaver(string fileName){
         this.fileName = fileName;
-        File.Create(this.fileName).Close();
+        if (!File.Exists(this.fileName)){
+            File.Create(this.fileName).Close();
+        }
     }
 
     //making a new funciton to just append a line to the file 
