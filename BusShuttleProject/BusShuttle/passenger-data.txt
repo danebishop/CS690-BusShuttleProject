@@ -1,3 +1,8 @@
 
 Fat Jimmy:Red:Letterman:5
 Big Mike:Red:Student Center:4
+Fat Jimmy:Red:Tower:5
+Fat Jimmy:Red:Tower:6
+Fat Jimmy:Red:Oakwood:2
+Fat Jimmy:Red:Anthony:7
+Fat Jimmy:Red:Letterman:23
