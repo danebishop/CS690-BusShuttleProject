@@ -4,11 +4,10 @@ public class DataManager{
 
     FileSaver fileSaver;
 
-
-    public List<Loop> Loops{get:}
-    public List<Stop> Stops{get;}
-    public List<Driver> Drivers{get}
-    public List<PassengerData> PassengerData {get;}
+    public List<Loop> Loops { get; }
+    public List<Stop> Stops { get; }
+    public List<Driver> Drivers { get; }
+    public List<PassengerData> PassengerData { get; } 
 
     public DataManager(){
                 
@@ -32,6 +31,8 @@ public class DataManager{
         Loops[0].Stops.Add(Stops[1]);
         Loops[0].Stops.Add(Stops[2]);
         Loops[0].Stops.Add(Stops[3]);
+        Loops[0].Stops.Add(Stops[4]);
+
 
 
         Drivers = new List<Driver>();
@@ -43,7 +44,7 @@ public class DataManager{
     }
 
     public void AddNewPassengerData(PassengerData data){
-        this.PassengerData.Add((data);
+        this.PassengerData.Add(data);
         this.fileSaver.AppendData(data);
 
     }

@@ -31,11 +31,11 @@ public class ConsoleUI{
 
                 Console.WriteLine("You selected "+selectedStop.Name+ " stop.");
 
-                int boarded = AnsiConsole.Prompt(new TextPrompt<int>("How many boarded?"));
+                int boarded = AnsiConsole.Prompt(new TextPrompt<int>("Enter number of people boarded: "));
 
                 PassengerData data = new PassengerData(boarded, selectedStop, selectedLoop, selectedDriver);
 
-                dataManager.AddNewPassengerData(data)
+                dataManager.AddNewPassengerData(data);
 
                 command = AnsiConsole.Prompt(new SelectionPrompt<string>().Title("What's Next?").AddChoices(new[]{"continue","end"}));
             
