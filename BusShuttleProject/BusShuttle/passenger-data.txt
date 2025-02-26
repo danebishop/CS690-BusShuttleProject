@@ -1,2 +1,2 @@
-MainPark:6
-Main Garage:9
+main:4
+park :5

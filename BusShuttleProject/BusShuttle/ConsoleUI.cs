@@ -1,5 +1,11 @@
 //need this to be in same namespace as program
+
 namespace BusShuttle;
+
+//this needs to be here since we are using these pakages - added auto 
+
+using Spectre.Console;
+
 
 
 //create a console UI class 
@@ -13,7 +19,11 @@ public class ConsoleUI{
 
     //this is main area 
     public void Show(){
-        string mode = AskForInput("Please select mode (driver OR manager)?");
+        //below was first phase 
+        //string mode = AskForInput("Please select mode (driver OR manager)?");
+
+        //here is the code we added with spectre console to ask for selection instead of asking user to input choice
+        var mode = AnsiConsole.Prompt(new SelectionPrompt<string>().Title("Please select mode").AddChoices(new[]{"driver","manager"}));
 
         if (mode=="driver"){
 
@@ -26,7 +36,10 @@ public class ConsoleUI{
 
                 fileSaver.AppendLine(stopName+":"+boarded);
 
-                command = AskForInput("Enter command (end OR continue): ");
+                //original - we add spectre selection instead
+                //command = AskForInput("Enter command (end OR continue): ");
+                command = AnsiConsole.Prompt(new SelectionPrompt<string>().Title("What's Next?").AddChoices(new[]{"continue","end"}));
+                
 
             }while(command !="end");
 
